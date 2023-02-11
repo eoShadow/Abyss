@@ -1,0 +1,58 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    box-sizing: 0;
+
+}
+
+.fundo {
+    height: 100%;
+    width: 100%;
+    background: blue;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    transition: ease-in 0.5s ease;
+}
+
+.caixa {
+    margin: 0 0 30px 0;
+    height: 25%;
+    width: 90%;
+    background: rgba(39, 0, 52, 0.808);
+    border-radius: 5px;
+    border: solid black 2px;
+    display: flex;
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+}
+
+#dialogo {
+    color: white;
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 10px;
+}
+
+.resp {
+    width: 90%;
+    height: 5%;
+    margin: 0 0 5px 0;
+    border-radius: 5px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.resp p {
+    flex: 1;
+    height: 94%;
+    margin: 3px;
+    background: rgba(39, 0, 52, 0.735);
+    border: solid black 2px;
+    border-radius: 5px;
+
+}
