@@ -91,6 +91,7 @@ but2.addEventListener('mousedown', () => {
 fundo.addEventListener('mousedown', (event) => {
     if (event.button === 0 && window.getComputedStyle(tela).getPropertyValue('display') === 'none' && window.getComputedStyle(hist).getPropertyValue('display') === 'none') {
         fala();
+        adicionarFala(dialogo.textContent);
     }
 });
 
@@ -1355,7 +1356,7 @@ respostas.style.display = 'flex';
     }
 
     animation();
-    adicionarFala(dialogo.textContent);
+    
     
 }
 
@@ -1459,7 +1460,7 @@ function automa() {
 
     intervaloAuto = setInterval(() => {
         if (window.getComputedStyle(respostas).getPropertyValue('display') === 'none' && finish === true) {
-
+         adicionarFala(dialogo.textContent);
             fala()
         }
     }, 8000);
