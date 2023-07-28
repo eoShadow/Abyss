@@ -72,14 +72,14 @@ but2.addEventListener('mousedown', () => {
     if (twox == false) {
         textvel = 30;
         twox = true;
-        but2.style.background = 'white'
+        but2.style.background = '#4E0000'
     } else {
         textvel = 10;
-        but2.style.background = 'rgb(75, 139, 182)'
+        but2.style.background = '#9E0000'
         twox = false;
     }
 
-    console.log(textvel)
+   
 })
 
 
@@ -457,6 +457,7 @@ respostas.style.display = 'flex';
                 resp2.innerHTML = 'Voltar para casa.'
                 resp1.innerHTML = 'Continuar andando.'
                 resp3.innerHTML = 'Procurar uma Biblioteca.'
+                b = 1;
     
                  a++;
                     break
@@ -1229,14 +1230,13 @@ respostas.style.display = 'flex';
 
 
         }
-console.log(selected)
+
 
     }
 
     if (rota === 'rota2' && window.getComputedStyle(respostas).getPropertyValue('display') === 'none' && finish === true) {
 
 
-        console.log(b)
         switch (b) {
               case 1:
                 fundo.style.background = 'white';
@@ -1320,7 +1320,6 @@ console.log(selected)
     if (rota === 'rota3' && window.getComputedStyle(respostas).getPropertyValue('display') === 'none' && finish === true) {
 
 
-        console.log(c)
         switch (c) {
             case 1:
                 fundo.style.background = 'pink';
@@ -1331,19 +1330,20 @@ console.log(selected)
                 break
             case 2:
                 fundo.style.background = 'red';
-                dialogo.innerHTML = '-Vida, movimento… talvez a resposta seja algum ser vivo? Mas bom… só tem eu nesse quarto, mas vale arriscar…'
+                dialogo.innerHTML = 'não fiz! continua andando vai'
+                a = 58;
                 c++;
                 break
             case 3:
                 fundo.style.background = 'black';
-                dialogo.innerHTML = 'Serio?'
+                dialogo.innerHTML = '-Vida, movimento… talvez a resposta seja algum ser vivo? Mas bom… só tem eu nesse quarto, mas vale arriscar…'
                 rota = 'rota1'
                 a = 83;
                 c++;
                 break
             case 4:
                 fundo.style.background = 'white';
-                dialogo.innerHTML = 'c4'
+                dialogo.innerHTML = 'Serio?'
                 a = 1;
                 b = 1;
                 c = 1;
@@ -1356,9 +1356,8 @@ console.log(selected)
 
     animation();
     adicionarFala(dialogo.textContent);
-    console.log(a)
+    
 }
-
 
 
 
@@ -1368,7 +1367,7 @@ resp1.addEventListener('mousedown', (event) => {
     if (event.button === 0) {
         if(a === 40 && selected.indexOf(1) != 0 && selected.length === 2){
          rota = 'rota2'
-         console.log(rota)
+         
          respostas.style.display = 'none';
          fala()
         selected = [];
@@ -1377,7 +1376,7 @@ resp1.addEventListener('mousedown', (event) => {
     }else{
         rota = 'rota1'
         respostas.style.display = 'none';
-        console.log(rota)
+        
         selected.push(1)
     }
     }
@@ -1387,7 +1386,7 @@ resp2.addEventListener('mousedown', (event) => {
     if (event.button === 0) {
         rota = 'rota2'
         respostas.style.display = 'none';
-        console.log(rota)
+        
          selected.push(2)
     }
 })
@@ -1395,7 +1394,7 @@ resp3.addEventListener('mousedown', (event) => {
     if (event.button === 0) {
         rota = 'rota3'
         respostas.style.display = 'none';
-        console.log(rota)
+        
          selected.push(3)
     }
 })
@@ -1430,7 +1429,7 @@ function animation() {
 
         finish = true;
         letras = [];
-        console.log(original)
+        
     }
 
 }
@@ -1451,7 +1450,7 @@ but.addEventListener('mousedown', (event) => {
             clearInterval(intervaloAuto);
         }
 
-        console.log(auto)
+        
     }
 })
 
